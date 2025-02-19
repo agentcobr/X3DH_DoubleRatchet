@@ -8,12 +8,9 @@ class DoubleRatchet {
 private:
     RatchetState state;
 
-    QByteArray kdfExtract(const QByteArray& inputKeyMaterial,
-                          const QByteArray& salt);
+    QByteArray kdfExtract(const QByteArray& inputKeyMaterial, const QByteArray& salt);
 
-    QByteArray kdfExpand(const QByteArray& prk,
-                         const QByteArray& info,
-                         int outputSize);
+    QByteArray kdfExpand(const QByteArray& prk, const QByteArray& info, int outputSize);
 
 public:
     const RatchetState& getState() const { return state; }
